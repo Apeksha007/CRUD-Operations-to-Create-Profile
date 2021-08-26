@@ -1,0 +1,88 @@
+
+--Table dbo.EmpDetails
+
+USE [Eployee]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[EmpDetails] (
+	[EmpName] [nvarchar](250) NULL,
+	[EmpLastName] [nvarchar](250) NULL,
+	[EmpId] [nvarchar](50) NULL,
+	[OrganisationName] [nvarchar](250) NULL,
+	[city] [nvarchar](150) NULL,
+	[Address] [nvarchar](250) NULL,
+	[Date] [datetime] NULL);
+GO
+
+INSERT INTO [dbo].[EmpDetails] ([EmpName], [EmpLastName], [EmpId], [OrganisationName], [city], [Address], [Date])
+	VALUES (N'Sundarraj', N'Shetty', N'2', N'Relince', N'Udupi', N'', CAST(0x0000ad9000000000 AS datetime))
+
+GO
+INSERT INTO [dbo].[EmpDetails] ([EmpName], [EmpLastName], [EmpId], [OrganisationName], [city], [Address], [Date])
+	VALUES (N'Apeksha', N'Hanji', N'1', N'Aargees', N'hubli', N'', CAST(0x0000ad8f00000000 AS datetime))
+
+GO
+
+--Table dbo.IdProof
+
+USE [Eployee]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[IdProof] (
+	[slno] [int] NULL,
+	[Emp_id] [int] NULL,
+	[Extensions] [nvarchar](250) NULL);
+GO
+
+INSERT INTO [dbo].[IdProof] ([slno], [Emp_id], [Extensions])
+	VALUES (1, 1, N'.jpg')
+
+GO
+INSERT INTO [dbo].[IdProof] ([slno], [Emp_id], [Extensions])
+	VALUES (2, 2, N'.png')
+
+GO
+
+--Table dbo.Photo
+
+USE [Eployee]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[Photo] (
+	[slno] [int] NULL,
+	[Emp_id] [int] NULL,
+	[Extensions] [nvarchar](250) NULL);
+GO
+
+INSERT INTO [dbo].[Photo] ([slno], [Emp_id], [Extensions])
+	VALUES (1, 1, N'.png')
+
+GO
+INSERT INTO [dbo].[Photo] ([slno], [Emp_id], [Extensions])
+	VALUES (2, 2, N'.jpeg')
+
+GO
+
+--Table dbo.Resume
+
+USE [Eployee]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[Resume] (
+	[slno] [int] NULL,
+	[Emp_id] [int] NULL,
+	[Extensions] [nvarchar](250) NULL);
+GO
+
+INSERT INTO [dbo].[Resume] ([slno], [Emp_id], [Extensions])
+	VALUES (1, 1, N'.jpg')
+
+GO
+INSERT INTO [dbo].[Resume] ([slno], [Emp_id], [Extensions])
+	VALUES (2, 2, N'.png')
+
+GO
